@@ -21,7 +21,7 @@ body, html {
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("pic2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("marsh.webp");
 
   /* Set a specific height */
   height: 50%;
@@ -42,6 +42,7 @@ body, html {
   transform: translate(-50%, -50%);
   color: white;
 }
+    
 /* Header/logo Title */
 .header {
   padding: 80px;
@@ -92,6 +93,14 @@ body, html {
   color: white;
 }
 
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+/*   color: white; */
+  display: none;
+  padding: 100px 20px;
+}
+
 /* Column container */
 .row {  
   display: -ms-flexbox; /* IE10 */
@@ -103,10 +112,10 @@ body, html {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
+  -ms-flex: 20%; /* IE10 */
+  flex: 20%;
   background-color: #f1f1f1;
-  padding: 20px;
+  padding: 15px;
 }
 
 /* Main column */
@@ -194,6 +203,42 @@ body, html {
   }
 }
 
+ /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.tab  {
+border: none;
+}
+/* Add a background color and some padding around the form */
+.container2 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+} 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .navbar a {
@@ -207,7 +252,7 @@ body, html {
 
 <div class="hero-image">
   <div class="hero-text">
-    <h1>Needs of Salt-pan Workers</h1>
+    <h1>Unmet Needs of Salt-pan Workers</h1>
     <p> An affordable tool to help salt-pan workers transport things through marshy lands</p>
 <!--     <button>Hire me</button> -->
   </div>
@@ -219,54 +264,130 @@ body, html {
 </div>-->
 
 <div class="navbar">
-  <a href="#" class="active">Home</a>
-  <a href="#">Cause</a>
-  <a href="#">Comprehension</a>
-  <a href="#">Crafting</a>
-  <a href="#" class="right">Link</a>
+  <a id="defaultOpen" class="tab" onclick="openPage('Home',          this, 'green',this.id)">Home</a>
+  <a id ="tab2" class="tab" onclick="openPage('Cause',         this, 'green',this.id)">Cause</a>
+  <a id ="tab3" class="tab" onclick="openPage('Comprehension', this, 'green',this.id)">Comprehension</a>
+  <a id ="tab4" class="tab" onclick="openPage('Crafting',      this, 'green',this.id)">Crafting</a>
+  <a id ="tab5" class="tab" onclick="openPage('About us',    this, 'green',this.id)">About us</a>
 </div>
 
 <div class="row">
   <div class="side">
     <h2>Our Team</h2>
-    <img src="pic1.jpg" alt="Jane" style="width:120px;height:130px;" class="round" hspace="10px">
+    </br> 
+    <img src="gru.jpg" alt="Jane" style="width:100px;height:110px;" class="round" hspace="10px">
     <h3>Utkarsh Thakre:</h3>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h4>utkarsh@mail.com</h4>
+    <p> utkarsh@mail.com </p>
     </br>
-    <img src="shikhar.jpg" alt="Shikhar" style="width:120px;height:130px;" class="round" hspace="10px">
-    <h3>Shikhar Agrawal:</h3>
-    <p>Hi, I am Shikhar Agrawal, really enthusiatic about solving problems using technology and innovation.<br> I am really interested in the field of entrepreneurship and want to create impact in the society</p>
-    <h4>shikhar.ag@iitb.ac.in</h4>
     </br>
-    <img src="pic1.jpg" alt="Jane" style="width:120px;height:130px;" class="round" hspace="10px">
+    <img src="Shikhar.jpg" alt="Jane" style="width:100px;height:110px;" class="round" hspace="10px">
+    <h3>Shikhar Agarwal:</h3>
+    <p> shikhar@mail.com </p>
+    </br>
+    </br>
+    <img src="pic1.jpg" alt="Jane" style="width:100px;height:110px;" class="round" hspace="10px">
     <h3>Tanay Mangal:</h3>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h4>tanay@mail.com</h4>
-    
-    <!--
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>-->
-  </div>
-  <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <p> tanay@mail.com</p>
+</div>
+
+<div class="main">
+    <div id="Home" class="tabcontent">
+        <h1>An affordable and robust Tool to transport goods, heavy equipment, or tools in/near salt pan fields in Marshy lands.</h1>
+        <h2>Background</h2>
+        <p>We have got to this problem from studying the various documentaries made on the near seashore salt pan field workers in the state of Tamil-Nadu and Gujarat. These fields due to being in proximity to the sea are highly marshy and in certain seasons extremely difficult to traverse through.</p>
+        <h2>Some Info on Marshes: </h2>
+        <img src="worker.jpg" alt="Jane" style="height:400px;width:450px:" hspace="10px" float: left;>
+        
+        <p>A salt marsh or saltmarsh, also known as a coastal salt marsh or a tidal marsh, is a coastal ecosystem found between land and open salt water that is regularly flooded by the tides.
+A salt marsh begins when mud and silt are deposited along a sheltered part of the coastline. This is because rates of deposition are greater than transportation due to the lack of energy in the waves. Often salt marsh is found on the inside of a coastal spit.
+The deposition builds up over time meaning that the mud breaks the surface to form mudflats.
+These salt marshes also protect shorelines from erosion by buffering wave action and trapping sediments. They reduce flooding by slowing and absorbing rainwater and protect water quality by filtering runoff, and by metabolizing excess nutrients. </p>
+        <br>
+        <h2>Context:</h2>
+
+        <p>Salt pans workers especially during the time of making settlement and shifting their belongings from their home village to salt pans often face difficulty crossing these marshlands, where no typical vehicle two/four wheeler will go.
+</p>
+    </div>
+
+    <div id="Cause" class="tabcontent">
+      <h3>Cause</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="Comprehension" class="tabcontent">
+      <h3>About</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+      
+    <div id="About us" class="tabcontent">
+        <h2>About us</h2>
+      <h3>Utkarsh thakre</h3>
+    </br>
+    <h3>Shikhar Agarwaal</h3>
+    <img src="Shikhar.jpg" alt="Shikhar" style="width:120px;height:130px;" class="round" hspace="10px">
+      <p>Hi, I am Shikhar Agrawal, really enthusiatic about solving problems using technology and innovation.<br> I am really interested in the field of entrepreneurship and want to create impact in the society</p>
+   
+    </br></br></br></br></br>
+
+    <h3>Tanay Mangal</h3>
+    </div>
+    <div id="Crafting" class="tabcontent">
+      <h3>Crafting</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+
+    <script>
+    function openPage(pageName,elmnt,color,id) {
+      var i, tabcontent, navbar_a;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+        
+      document.getElementById(pageName).style.display = "block";
+        var tabs = document.getElementsByClassName("tab");
+        for (var j = 0; j < tabs.length; j++) {
+            var item = tabs[j];
+            item.style.backgroundColor = (item.id == id) ? "green" : "#333";}
+//       elmnt.style.backgroundColor =  color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+
+
   </div>
 </div>
 
+<div class="container2">
+  <br>
+  <h2>Write to us:</h2>
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="india">India</option>
+      <option value="australia">Australia</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div> 
+
 <div class="footer">
-  <h2>Footer</h2>
+  <h2>Visit: Innovation By Design Blog</h2>
 </div>
 
 </body>
