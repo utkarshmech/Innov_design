@@ -114,16 +114,18 @@ body, html {
 .side {
   -ms-flex: 20%; /* IE10 */
   flex: 20%;
-  background-color: #f1f1f1;
-  padding: 5px;
+  background-color: white;
+  padding: 15px;
 }
 
 /* Main column */
 .main {   
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
-  background-color: #f1f1f1;
+  background-color:white;
   padding: 10px;
+  padding-left: 30px;
+  padding-right: 60px;
 }
 
 /* Fake image, just for this example */
@@ -152,14 +154,16 @@ body, html {
 /* Add some shadows to create a card effect */
 .card {
   background-color: white;
-  padding: 20px;
+  padding: 10px;
+/*   padding-top: 20px; */
+  padding-bottom: 20px;
   margin-top: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 8px 12px 2px rgba(0, 0, 0, 0.3);
 }
 .card2 {
-  background-color: white;
-  padding: 60px;
-  margin-top: 15px;
+  background-color: silver;
+  padding: 5px;
+/*   margin-top: px; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 /* Some left and right padding inside the container */
@@ -174,6 +178,14 @@ body, html {
   display: table;
 }
 
+a:link, a:visited {
+  background-color: #367a55;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 .title {
   color: grey;
 }
@@ -197,7 +209,7 @@ body, html {
 .footer {
   padding: 10px;
   text-align: center;
-  background: grey;
+  background: black;
 }
 
 .round { 
@@ -247,8 +259,8 @@ border: none;
 /* Add a background color and some padding around the form */
 .container2 {
   border-radius: 5px;
-  background-color: #f1f1f1;
-  padding: 10px;
+  background-color: white;
+  padding: 30px;
 } 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
@@ -309,7 +321,7 @@ border: none;
 </div>
 
 <div class="main">
-    <div class="card2">
+<!--     <div class="card2"> -->
     <div id="Home" class="tabcontent">
 
 <h1  id="an-affordable-and-robust-tool-to-transport-goods-heavy-equipment-or-tools-innear-salt-pan-fields-in-marshy-lands">An affordable and robust Tool to transport goods, heavy equipment, or tools in/near salt pan fields in Marshy lands.</h1>
@@ -447,7 +459,7 @@ So After discussing and researching about all the possible details and informati
     <h3>Tanay Mangal</h3>
     <p> The biggest competition is myself. I am not looking to follow others or pull them down. I'm planning to test my own boundaries.</p>
     </div>
- </div>
+<!--  </div> -->
 </div>
     <script>
     function openPage(pageName,elmnt,color,id) {
@@ -488,7 +500,7 @@ So After discussing and researching about all the possible details and informati
 </div>
 </div>
 <div class="footer">
-    
+
   <h3> <a href="http://www.idc.iitb.ac.in/events/webinar-innovation-design">Visit: Innovation By Design Main Page</a> </h3>
 
 </div>
